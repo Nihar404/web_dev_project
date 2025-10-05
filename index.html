@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Nihar Mehta | Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  
+  <link rel="icon" type="image/png" href="/Users/niharmehta/Desktop/sst-projects/download.png">
+  <style>
+    * {
+
+      box-sizing: border-box;
+
+      margin: 0;
+
+      padding: 0;
+
+      font-family: "Poppins", sans-serif;
+
+    }
+
+
+
+    body {
+
+      line-height: 1.6;
+
+      background-color: #f9f9f9;
+
+      color: #333;
+
+    }
+
+
+
+    .container {
+
+      width: 90%;
+
+      max-width: 1100px;
+
+      margin: 0 auto;
+
+      padding: 40px 0;
+
+    }
+
+
+
+    h1,
+
+    h2,
+
+    h3 {
+
+      text-align: center;
+
+      margin-bottom: 20px;
+
+    }
+
+    .hero-header {
+
+      background: linear-gradient(135deg, #4f46e5, #3b82f6);
+
+      color: #fff;
+
+      padding: 80px 0;
+
+      text-align: center;
+
+    }
+
+
+
+    .hero-header h1 span {
+
+      color: #ffeb3b;
+
+    }
+
+
+
+    .btn {
+
+      display: inline-block;
+
+      margin-top: 15px;
+
+      padding: 10px 20px;
+
+      background: #3b82f6;
+
+      color: #fff;
+
+      text-decoration: none;
+
+      border-radius: 5px;
+
+      transition: 0.3s;
+
+    }
+
+
+
+    .btn:hover {
+
+      background: #2563eb;
+
+    }
+
+    .about,
+
+    .skills,
+
+    .projects,
+
+    .contact {
+
+      padding: 60px 0;
+
+      background: #fff;
+
+    }
+
+
+
+    @keyframes glowColor {
+
+      0% {
+
+        box-shadow: 0 0 20px rgb(12, 140, 214), 0 0 40px #0ff;
+
+      }
+
+
+
+      50% {
+
+        box-shadow: 0 0 20px #00ffc8, 0 0 40px #ff9900;
+
+      }
+
+
+
+      100% {
+
+        box-shadow: 0 0 20px rgb(12, 140, 214), 0 0 40px #0ff;
+
+      }
+
+    }
+
+    .content_about {
+
+      display: flex;
+
+      flex-direction: row;
+
+      align-items: center;
+
+      gap: 30px;
+
+    }
+
+
+
+    .about-image {
+
+      width: 250px;
+
+      height: 250px;
+
+      border-radius: 50%;
+
+      object-fit: cover;
+
+      animation: glowColor 10s ease-in-out infinite;
+
+    }
+
+
+
+    .about-text {
+
+      font-size: large;
+
+    }
+
+    .skills {
+
+      background-color: #f3f4f6;
+
+    }
+
+
+
+    .skills-list {
+
+      display: flex;
+
+      flex-wrap: wrap;
+
+      justify-content: center;
+
+      list-style: none;
+
+      gap: 15px;
+
+    }
+
+
+
+    .skills-list li {
+
+      background: #e5e7eb;
+
+      padding: 10px 15px;
+
+      border-radius: 5px;
+
+      text-align: center;
+
+      font-weight: 600;
+
+      transition: 0.3s;
+
+    }
+
+
+
+    .skills-list li:hover {
+
+      transform: translateY(-5px);
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    }
+
+    .projects-grid {
+
+      display: grid;
+
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+      gap: 20px;
+
+    }
+
+
+
+    .project-card {
+
+      background: #f3f4f6;
+
+      padding: 20px;
+
+      border-radius: 8px;
+
+      text-align: center;
+
+      transition: 0.3s;
+
+      display: flex;
+
+      flex-direction: column;
+
+      justify-content: space-between;
+
+    }
+
+
+
+    .project-card img {
+
+      width: 100%;
+
+      max-width: 250px;
+
+      margin: 15px auto;
+
+      border-radius: 5px;
+
+    }
+
+
+
+    .project-card:hover {
+
+      transform: translateY(-5px);
+
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+
+    }
+
+
+
+    .project-card a {
+
+      text-decoration: none;
+
+      color: #3b82f6;
+
+      font-weight: 600;
+
+    }
+
+    .contact {
+
+      text-align: center;
+
+    }
+
+
+
+    .contact .btn {
+
+      margin-bottom: 20px;
+
+    }
+
+
+
+    .social-links a {
+
+      margin: 0 10px;
+
+    }
+
+
+
+    .social-links img {
+
+      width: 40px;
+
+      transition: transform 0.3s;
+
+    }
+
+
+
+    .social-links img:hover {
+
+      transform: scale(1.1);
+
+    }
+
+    .footer {
+
+      text-align: center;
+
+      padding: 20px;
+
+      background: #111827;
+
+      color: #fff;
+
+    }
+
+    @media (max-width: 768px) {
+
+      .content_about {
+
+        flex-direction: column;
+
+        text-align: center;
+
+      }
+
+
+
+      .about-image {
+
+        width: 200px;
+
+        height: 200px;
+
+        margin-bottom: 20px;
+
+      }
+
+
+
+      h1 {
+
+        font-size: 2.5rem;
+
+      }
+
+
+
+      h2 {
+
+        font-size: 2rem;
+
+      }
+
+    }
+
+    @media (max-width: 480px) {
+
+      .container {
+
+        padding: 20px 0;
+
+      }
+
+
+
+      .hero-header {
+
+        padding: 60px 0;
+
+      }
+
+
+
+      h1 {
+
+        font-size: 2rem;
+
+      }
+
+
+
+      h2 {
+
+        font-size: 1.75rem;
+
+      }
+
+
+
+      .about,
+
+      .skills,
+
+      .projects,
+
+      .contact {
+
+        padding: 40px 0;
+
+      }
+
+
+
+      .projects-grid {
+
+        grid-template-columns: 1fr;
+
+      }
+
+
+
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+
+  <header class="hero-header">
+
+    <div class="container">
+
+      <h1>Hi, I'm <span>Nihar</span></h1>
+
+      <p>Aspiring Web Developer | Problem Solver | Tech Enthusiast</p>
+
+      <a href="#projects" class="btn">View My Work</a>
+
+    </div>
+
+  </header>
+
+
+
+  <section id="about" class="about">
+
+    <div class="container">
+
+      <h2>About Me</h2>
+
+      <div class="content_about">
+
+        <img src="/Users/niharmehta/Desktop/portfolio/student_Photo.jpg" alt="Nihar" class="about-image" />
+
+        <div class="about-text">
+
+          <p>
+
+            <strong>
+
+              I'm a passionate developer currently studying at SST. I love
+
+              building creative web solutions, learning new technologies, and
+
+              solving real-world problems. I have opted for Bits pillani Bsc
+
+              degree.
+
+            </strong>
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="skills" class="skills">
+
+    <div class="container">
+
+      <h2>Skills</h2>
+
+      <ul class="skills-list">
+
+        <li style="background-color: #2563eb; color: white">HTML5 & CSS3</li>
+
+        <li style="background-color: #ef4444; color: white">C</li>
+
+        <li style="background-color: #f97316; color: white">C++</li>
+
+        <li style="background-color: #eab308; color: white">Java</li>
+
+        <li style="background-color: #8b5cf6; color: white">Python</li>
+
+        <li style="background-color: #1f2937; color: white">Git & GitHub</li>
+
+      </ul>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="projects" class="projects">
+
+    <div class="container">
+
+      <h2>Projects</h2>
+
+      <div class="projects-grid">
+
+        <div class="project-card">
+
+          <h3>Ferris Wheel</h3>
+
+          <img src="/Users/niharmehta/Desktop/portfolio/ferris_wheel.png"
+            alt="ferris wheel" />;
+
+          <p>
+
+            A CSS animation practice project creating a dummy representation
+
+            of a Ferris wheel, where the rim and buckets move in circular
+
+            rotations.
+
+          </p>
+
+          <a href="https://nihar404.github.io/ferrouswheel/" target="_blank">View Project</a>
+
+        </div>
+
+        <div class="project-card">
+
+          <h3>Moon-Earth Orbit</h3>
+
+          <img src="/Users/niharmehta/Desktop/portfolio/moonearth.png" alt="moon earth orbit" />
+
+          <p>
+
+            A project to demonstrate the revolution of the moon around thesun
+
+            using pure CSS animations and transforms.
+
+          </p>
+
+          <a href="https://nihar404.github.io/moonearth/" target="_blank">View Project</a>
+
+        </div>
+
+        <div class="project-card">
+
+          &lt;h3&gt;Prodct Page</h3>
+
+          <img src="/Users/niharmehta/Desktop/sst-projects/Screenshot 2025-10-05 at 10.40.59 PM.png"
+            alt="productpage" />
+          <p>A project to create a product page.</p>
+
+          <a href="https://nihar404.github.io/moonearth/" target="_blank">View Project</a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <section id="contact" class="contact">
+
+    <div class="container">
+
+      <h2>Contact Me</h2>
+
+      <p>If you'd like to work together, feel free to reach out!</p>
+
+      <a href="mailto:niharmehta19907@gmail.com" class="btn">niharmehta19907@gmail.com</a>
+
+      <div class="social-links">
+
+        <a href="https://github.com/Nihar404" target="_blank"><img
+            src="/Users/niharmehta/Desktop/portfolio/github.png" alt="github" />
+
+          <a href="https://codeforces.com/profile/Nihar_mehta199" target="_blank" /><img
+            src="/Users/niharmehta/Desktop/portfolio/codeforces.png" alt="codeforces" />
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+
+  <footer class="footer">
+
+    <p>2025 Nihar Mehta. All rights reserved ©️ ®️.&lt;/p&gt;
+
+  </footer>
+
+</body>
+
+</html>
